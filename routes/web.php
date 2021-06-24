@@ -30,3 +30,4 @@ Route::post('localhost/project1/public/contact/submit','App\Http\Controllers\Cli
 Route::post('localhost/project1/public/comment','App\Http\Controllers\CommentController@store');
 
 //Route::get('/send',[MailController::class,"send"]);
+//Route::get('/i','App\Http\Controllers\ClientController@get_inf')
