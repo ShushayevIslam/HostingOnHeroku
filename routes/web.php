@@ -15,7 +15,7 @@ use App\Http\Controllers\MailController;
 
 
 //Route::get('/i','App\Http\Controllers\ClientController@get_inf');
-
+///
 Route::get('/',function(){
 	return view('home');
 });
