@@ -13,20 +13,20 @@ use App\Http\Controllers\MailController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 //Route::get('/i','App\Http\Controllers\ClientController@get_inf');
 
-Route::get('/{lang}',function($lang){
-	App::setlocale($lang);
+Route::get('/',function(){
 	return view('home');
 });
+
+Route::get('/{locale}','App\Http\Controllers\LocalizationController@index');
 
 
 //Route::post('/getmsg','AjaxController@index');
 
 Route::post('localhost/project1/public/contact/submit','App\Http\Controllers\ClientController@save');
+
+Route::post('localhost/project1/public/comment','App\Http\Controllers\CommentController@store');
 
 //Route::get('/send',[MailController::class,"send"]);

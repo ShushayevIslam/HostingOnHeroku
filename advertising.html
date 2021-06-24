@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Advertising</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style_advertising.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	<br>
+	<div id="head">
+		<div id="d">
+			<div id="div_advert1">
+				<button type="button" class="close" aria-label="close">
+  				<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 style="text-align: center;">Travel to Tokyo</h4>
+			</div>
+			<div id="but">
+				<button class="btn btn-warning btn1">Show Advertising</button>
+				<button class="btn btn-warning btn5">Animate</button>
+			</div>
+			
+		</div>
+		<div>
+			<div id="div_advert2">
+				<button type="button" class="close" aria-label="close">
+  				<span aria-hidden="true">&times;</span>
+				</button>
+				<h4 style="text-align: center;">6 Days in Tokyo</h4>
+
+				<div class="day1 style_day">
+					<input type="radio" name="" id = "radio1">
+					<h5 class="text"> Day 1 Tokyo Highlights</h5>
+				</div>
+				<br>
+				<div class="day2 style_day">
+					<input type="radio" name="" id = "radio2">
+					<h5 class="text"> Day 2 Tokyo - Mt.Fuji- Tokyo</h5>
+				</div>
+				<br>
+				<div class="day3 style_day">
+					<input type="radio" name="" id = "radio3">
+					<h5 class="text"> Day 3 A Taste of Ancient Japanese</h5>
+				</div>
+				<br>
+				<div class="day4 style_day">
+					<input type="radio" name="" id = "radio4">
+					<h5 class="text"> Day 4 Hiroshima</h5>
+				</div>
+				<br>
+				<div class="day5 style_day">
+					<input type="radio" name="" id = "radio5">
+					<h5 class="text"> Day 5 Tokyo Miyajima - Hiroshima</h5>
+				</div>
+				<br>
+				<div class="day6 style_day">
+					<input type="radio" name="" id = "radio6">
+					<h5 class="text">Day 6 Disneyland</h5>
+				</div>
+			</div>
+			<div id="but">
+				<button class="btn btn-warning btn2">SlideToggle</button>
+				<button class="btn btn-warning btn3">Stop</button>
+				<button class="btn btn-warning btn4">FadeToggle</button>
+			</div>
+			
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".close").click(function(){
+				$("#div_advert1").hide();
+			});
+
+			$(".btn1").click(function(){
+				$("#div_advert1").show();
+			});
+
+			$(".btn2").click(function(){
+				$("#div_advert2").slideToggle(5000);
+			});
+
+			$(".btn3").click(function(){
+				$("#div_advert2").stop(false,true);
+			});
+			$(".btn4").click(function(){
+				$(".day1").fadeToggle(2000);
+				$(".day2").fadeToggle(2500);
+				$(".day3").fadeToggle(3000);
+				$(".day4").fadeToggle(3500);
+				$(".day5").fadeToggle(4000);
+				$(".day6").fadeToggle(4500);
+			});
+
+			$(".btn5").click(function(){
+				$("#div_advert1").animate({
+     			 	height: 'toggle'
+    			});
+			});
+		});
+	</script>
+</body>
+</html>
